@@ -1,0 +1,9 @@
+### IntelliJ IDEA
+.idea
+
+## Gradle
+.gradle/
+build/
+
+## Bukkit server
+server/
