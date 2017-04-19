@@ -3,18 +3,13 @@ plugins {
     id "ru.endlesscode.bukkitgradle" version "0.5.4"
 }
 
-// Information about project
-group "com.example"
-description "My first Bukkit plugin with Gradle"
-version "0.1"
+// Information about project (from gradle.properties)
+group = pluginGroup
+description = pluginDesc
+version = pluginVersion
 
 bukkit {
     meta {
-        name = "MyPlugin"
-        description = "My amazing plugin, that doing nothing"
-        main = "com.example.myplugin.MyPlugin"
-        version = "1.0"
-        url = "http://www.example.com/"
         authors = ["OsipXD", "Contributors"]
     }
 
