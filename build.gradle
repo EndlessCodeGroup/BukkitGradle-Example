@@ -1,6 +1,6 @@
 plugins {
     // Enable BukkitGradle
-    id "ru.endlesscode.bukkitgradle" version "0.5.4"
+    id "ru.endlesscode.bukkitgradle" version "0.5.6"
 }
 
 // Information about project (from gradle.properties)
@@ -8,12 +8,30 @@ group = pluginGroup
 description = pluginDesc
 version = pluginVersion
 
+// Block that configures bukkit
 bukkit {
+    // Configure plugin meta (plugin.yml)
     meta {
         authors = ["OsipXD", "Contributors"]
+        // Other parameters (uncomment to change default value):
+        //name = project.name
+        //description = project.description
+        //main = (Read about 'main' default value in README)
+        //version = project.version
+        //url = Searches property with name 'url'
     }
 
+    // Configuration for ':runServer' task
     run {
+        // To run server we need accept EULA
         eula = true
+        // Other parameters (uncomment to change default value):
+        //onlineMode = false
+        //dir = "server"
+        //debug = true
+        //encoding = "UTF-8"
+        //javaArgs = "-Xmx1G"
+        //bukkitArgs = ""
+        // You can read about these parameters in README
     }
 }
